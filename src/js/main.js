@@ -16,7 +16,7 @@ vhFix();
 actualYear();
 scrollToAnchor.init();
 backToTop.init();
-// preloader2.init();
+preloader2.init();
 scrollPerson.init();
 
 header.init();
