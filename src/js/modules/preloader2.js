@@ -1,37 +1,39 @@
 const init = () => {
-	const
-		images = document.images,
-		images_total_count = images.length,
-		// preloader = document.getElementById('page-preloader'),
-		loader = document.getElementById('loader'),
-		perc_display = document.getElementById('load_perc');
+	$(document).ready(function () {
+		const
+			images = document.images,
+			images_total_count = images.length,
+			preloader = document.getElementById('page-preloader'),
+			loader = document.getElementById('loader'),
+			perc_display = document.getElementById('load_perc');
 
-	let
-		images_load_count = 0;
+		let
+			images_load_count = 0;
 
-	for ( let i = 0;i < images_total_count; i++) {
-		let image_clone = new Image();
-		image_clone.onload = image_loaded
-		image_clone.onerror = image_loaded
-		image_clone.src = images[i].src
-		console.log(i)
-	}
+		for (let i = 0; i < images_total_count; i++) {
+			let image_clone = new Image();
+			image_clone.onload = image_loaded
+			image_clone.onerror = image_loaded
+			image_clone.src = images[i].src
+			// console.log(i)
+		}
 
-	function image_loaded() {
-		images_load_count++;
-		perc_display.innerHTML = (((100 / images_total_count) * images_load_count) << 0) + '%';
-		$(loader).css("width", perc_display.innerHTML);
-		console.log('perc_display.innerHTML');
-		console.log(perc_display.innerHTML);
+		function image_loaded() {
+			images_load_count++;
+			perc_display.innerHTML = (((100 / images_total_count) * images_load_count) << 0) + '%';
+			$(loader).css("width", perc_display.innerHTML);
+			// console.log('perc_display.innerHTML');
+			// console.log(perc_display.innerHTML);
 
-		// if (images_load_count >= images_total_count) {
-		// 	setTimeout(function () {
-		// 		if (!preloader.classList.contains('done')) {
-		// 			preloader.classList.add('done')
-		// 		}
-		// 	}, 1000);
-		// }
-	}
+			if (images_load_count >= images_total_count) {
+				setTimeout(function () {
+					if (!preloader.classList.contains('done')) {
+						preloader.classList.add('done')
+					}
+				}, 1000);
+			}
+		}
+	})
 };
 
 export default {
