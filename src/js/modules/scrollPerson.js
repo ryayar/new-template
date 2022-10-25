@@ -2,7 +2,6 @@ import helpers from '../helpers';
 
 const init = () => {
 	$(function () {
-		// let w = $(window);
 
 		helpers.$window.on('scroll', function () {
 			let top = $(this).scrollTop();
@@ -24,5 +23,5 @@ const init = () => {
 
 
 export default {
-	init,
+	init
 }

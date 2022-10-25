@@ -8,7 +8,7 @@ import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from "./modules/backToTop";
-import preloader2 from "./modules/preloader2";
+import preloader from "./modules/preloader";
 import scrollPerson from "./modules/scrollPerson"
 
 ieFix();
@@ -16,7 +16,7 @@ vhFix();
 actualYear();
 scrollToAnchor.init();
 backToTop.init();
-preloader2.init();
+preloader.init();
 scrollPerson.init();
 
 header.init();
