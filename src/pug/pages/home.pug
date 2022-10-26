@@ -121,8 +121,10 @@ main.home
 					.about__education
 						.about__title.title Образование
 						.about__education__text
-							each course in education
+							each course, i in education
 								.about__education__course
+									.education__rectangle
+										div(class=` rectangle-${i+1}`)
 									.education__name #{course.courseName}
 									.education__company #{course.courseCompany}
 									.education__date #{course.courseDate}
