@@ -72,7 +72,7 @@
 
 main.home
 	.content
-		.hi
+		.hi#hi
 			.container
 				.hi__row
 					.hi__body
@@ -88,13 +88,12 @@ main.home
 										на пользователя решения являются наиболее ценными
 										цифровыми ресурсами будущего.
 					.hi__info
-						ul
-							li.hi__nav
-								a(href="https://samara.hh.ru/resume/73137fd0ff0b50d8220039ed1f76615570656a" target="_blank") Резюме
-							li.hi__nav
-								a(href="#about") О себе
-							li.hi__nav
-								a(href="#skills") Навыки
+						each object, key in data.header.menu
+							a.header__link.js-to-anchor(
+								href=object.url
+								data-link=key
+							)
+								!= object.name
 						.hi__contacts
 							ul
 								li

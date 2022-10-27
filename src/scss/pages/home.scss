@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 100%;
 	background: #e0e0e0;
-	z-index: 1001;
+	z-index: 9999;
 }
 
 #loader__sprite {
@@ -43,6 +43,7 @@
 		border-radius: 30px;
 		border: 2px solid #D2233C;
 		display: none;
+		z-index: 1;
 
 		div {
 			position: relative;
@@ -319,7 +320,7 @@
 			width: 590px;
 		}
 
-		.hi__nav {
+		.header__link {
 			display: inline;
 			margin: 0 2em 0 0;
 			font-weight: 700;
@@ -332,7 +333,7 @@
 			}
 		}
 
-		li.hi__nav:first-child::before {
+		.header__link:first-child::before {
 			content: "";
 			position: absolute;
 			right: 235px;
@@ -457,7 +458,7 @@
 	}
 
 	@include devices {
-		.hi__nav {
+		.header__link {
 			display: none;
 		}
 
