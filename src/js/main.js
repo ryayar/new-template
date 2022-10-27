@@ -10,6 +10,7 @@ import scrollToAnchor from './modules/scrollToAnchor';
 import backToTop from "./modules/backToTop";
 import preloader from "./modules/preloader";
 import scrollPerson from "./modules/scrollPerson"
+import scrollText from "./modules/scrollText"
 
 ieFix();
 vhFix();
@@ -18,6 +19,7 @@ scrollToAnchor.init();
 backToTop.init();
 preloader.init();
 scrollPerson.init();
+scrollText.init();
 
 header.init();
 lazyLoading.init();

@@ -60,6 +60,7 @@
 		&__list {
 			width: 100%;
 			text-align: center;
+			background-color: $color-white;
 		}
 
 		&__link {
@@ -75,7 +76,7 @@
 			line-height: 25px;
 			text-align: left;
 			color: rgba($color-black, 0.7);
-			background-color: $color-white;
+			//background-color: $color-white;
 
 			&:not(:last-child) {
 				border-bottom: 1px solid $color-gray;
@@ -104,7 +105,7 @@
 
 			span {
 				display: block;
-				margin: 6.5px 0;
+				margin: 4px 0;
 				width: 39px;
 				height: 2px;
 				background-color: currentColor;
@@ -114,11 +115,15 @@
 			@include active {
 				span {
 					&:first-child {
-						transform: translate(0, 8px) rotate(-45deg);
+						transform: translate(0, 10px) rotate(-45deg);
+					}
+
+					&:nth-child(2) {
+						opacity: 0;
 					}
 
 					&:last-child {
-						transform: translate(0, -6px) rotate(45deg);
+						transform: translate(0, -10px) rotate(45deg);
 					}
 				}
 			}

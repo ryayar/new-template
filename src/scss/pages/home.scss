@@ -1,3 +1,91 @@
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+//html.has-scroll-smooth {
+//	//overflow: hidden;
+//}
+//
+//html.has-scroll-dragging {
+//	//-webkit-user-select: none;
+//	//-moz-user-select: none;
+//	//-ms-user-select: none;
+//	//user-select: none;
+//}
+//
+//.has-scroll-smooth body {
+//	//overflow: hidden;
+//}
+//
+//.has-scroll-smooth [data-scroll-container] {
+//	//min-height: 100vh;
+//}
+//
+//[data-scroll-direction="horizontal"] [data-scroll-container] {
+//	//height: 100vh;
+//	//display: inline-block;
+//	//white-space: nowrap;
+//}
+//
+//[data-scroll-direction="horizontal"] [data-scroll-section] {
+//	//display: inline-block;
+//	//vertical-align: top;
+//	//white-space: nowrap;
+//	//height: 100%;
+//}
+//
+//.c-scrollbar {
+//	//position: absolute;
+//	//right: 0;
+//	//top: 0;
+//	//width: 11px;
+//	//height: 100%;
+//	//transform-origin: center right;
+//	//transition: transform 0.3s, opacity 0.3s;
+//	//opacity: 0;
+//}
+//
+//.c-scrollbar:hover {
+//	//transform: scaleX(1.45);
+//}
+//
+//.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+//	//opacity: 1;
+//}
+//
+//[data-scroll-direction="horizontal"] .c-scrollbar {
+//	//width: 100%;
+//	//height: 10px;
+//	//top: auto;
+//	//bottom: 0;
+//	//transform: scaleY(1);
+//}
+//
+//[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+//	//transform: scaleY(1.3);
+//}
+//
+//.c-scrollbar_thumb {
+//	//position: absolute;
+//	//top: 0;
+//	//right: 0;
+//	//background-color: black;
+//	//opacity: 0.5;
+//	//width: 7px;
+//	//border-radius: 10px;
+//	//margin: 2px;
+//	//cursor: -webkit-grab;
+//	//cursor: grab;
+//}
+//
+//.has-scroll-dragging .c-scrollbar_thumb {
+//	//cursor: -webkit-grabbing;
+//	//cursor: grabbing;
+//}
+//
+//[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+//	//right: auto;
+//	//bottom: 0;
+//}
+
+
 .preloader {
 	position: fixed;
 	width: 100%;
@@ -11,6 +99,7 @@
 	transform: rotate(-5deg);
 	transition: .5s;
 }
+
 @include desktop {
 	#loader__sprite {
 		bottom: -550px;
@@ -135,9 +224,9 @@
 		line-height: 140%;
 	}
 
-	.hi__contacts	li {
-			margin: 5px 0;
-		}
+	.hi__contacts li {
+		margin: 15px 0;
+	}
 
 	.title {
 		font-weight: 700;
@@ -327,7 +416,7 @@
 			font-size: 18px;
 			line-height: 21px;
 
-			a:hover {
+			&:hover {
 				color: #4b4b4b;
 				text-shadow: 1px 1px 1em #000;
 			}
@@ -372,11 +461,13 @@
 			height: 100%;
 			text-align: center;
 			transform: translate(0, -5em);
+			z-index: -1;
 		}
 
 		.hi__big-bg-vector {
 			display: block;
 			width: 100%;
+			z-index: -1;
 		}
 
 		.hi__min-bg-vector {
@@ -445,6 +536,7 @@
 			display: block;
 			width: 100%;
 			transform: translateY(-8em);
+			z-index: -1;
 		}
 	}
 
@@ -454,6 +546,7 @@
 			display: block;
 			width: 100%;
 			transform: translateY(-4em);
+			z-index: -1;
 		}
 	}
 

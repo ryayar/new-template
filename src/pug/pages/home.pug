@@ -78,22 +78,24 @@ main.home
 					.hi__body
 						img.logo(src="../images/logo.png" alt="Logo")
 						.hi__title Ярослав,<br>Frontend
-						.hi__description.
-										Как разработчик, я высоко ценю способность
-										воплотить видение дизайнера в жизнь, что
-										считаю очень полезным для бизнеса. Я получаю
-										огромное удовлетворение, наблюдая за работой
-										от идеи до дизайна, особенно когда она появляется
-										в руках пользователя. Я считаю, что ориентированные
-										на пользователя решения являются наиболее ценными
-										цифровыми ресурсами будущего.
+						.hi__description
+							span.
+								Как разработчик, я высоко ценю способность
+								воплотить видение дизайнера в жизнь, что
+								считаю очень полезным для бизнеса. Я получаю
+								огромное удовлетворение, наблюдая за работой
+								от идеи до дизайна, особенно когда она появляется
+								в руках пользователя. Я считаю, что ориентированные
+								на пользователя решения являются наиболее ценными
+								цифровыми ресурсами будущего.
 					.hi__info
-						each object, key in data.header.menu
-							a.header__link.js-to-anchor(
-								href=object.url
-								data-link=key
-							)
-								!= object.name
+						.hi__info-parallax
+							each object, key in data.header.menu
+								a.header__link.js-to-anchor(
+									href=object.url
+									data-link=key
+								)
+									!= object.name
 						.hi__contacts
 							ul
 								li
@@ -111,10 +113,11 @@ main.home
 						.about__title.title Опыт работы
 						.about__works__text
 							each work in works
-								.work__date #{work.date}
-								.work__vacancy #{work.vacancy}
-								.work__name #{work.name}
-								.work__description #{work.description}
+								.about__work__block
+									.work__date #{work.date}
+									.work__vacancy #{work.vacancy}
+									.work__name #{work.name}
+									.work__description #{work.description}
 					.about__img(data-scroll-container)
 						img.person(src="../images/man.png" alt="Человек")
 					.about__education
@@ -132,7 +135,6 @@ main.home
 					img.about__min-bg-vector(src="../images/min-vector-3.png" alt="Visual-vector")
 		.skills#skills
 			.container
-				.skills__bg_image
 				.skills__title.title Навыки
 				.skills__row
 					.skills__column

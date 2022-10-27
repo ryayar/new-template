@@ -6,7 +6,7 @@ const init = () => {
 		helpers.$window.on('scroll', function () {
 			let top = $(this).scrollTop();
 			const blockAbout = $('.about__row')[0];
-			if (helpers.$window.innerWidth() > 1025) {
+			if (helpers.$window.innerWidth() >= 1025) {
 				if ((window.pageYOffset >= blockAbout.offsetTop) && (window.pageYOffset <= (blockAbout.offsetHeight + 300))) {
 					$('.person').css(
 						'margin-top', '0'

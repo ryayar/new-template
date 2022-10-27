@@ -29,7 +29,7 @@ const init = async () => {
 
 		rocketBoy.style.transform = ('translate(' + width + 'px, -' + height + 'px)');
 
-		if(perc === 160) {
+		if(perc === 150) {
 			helpers.$html.css('overflow', 'auto')
 			preloader.style.display = 'none';
 		}
