@@ -1,6 +1,7 @@
 import helpers from '../helpers';
 
 function openMenu() {
+	helpers.$html.css('overflow', 'hidden');
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
@@ -24,6 +25,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+	helpers.$html.css('overflow', 'auto')
 	return new Promise((resolve) => {
 		$('.js-burger').addClass('is-disabled').attr('disabled', true);
 
